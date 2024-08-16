@@ -25,8 +25,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: "./${{ env.Version }}/community"
-          dockerfile: "./${{ env.Version }}/community/Dockerfile"
+          context: "./${{ env.VERSION }}/community"
+          dockerfile: "./${{ env.VERSION }}/community/Dockerfile"
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: datacatering/neo4j:${{ env.Version }}
+          tags: datacatering/neo4j:${{ env.VERSION }}
